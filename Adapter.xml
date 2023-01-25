@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Adapter>
+  <transform> 
+    <!-- will fill out a static matrix in class Model
+        can be translate:[x,y,z] 
+        or rotate:[axis:char in {x,y,z}: angle in radians]
+        transform multiplication will be matrix * position vector (i.e. a 1 column matrix) -->
+    <translate>
+      <x>100</x>
+      <y>100</y>
+      <z>0</z>
+    </translate>
+  </transform>
+
+  <section id="bigcanouter" type="cylinder">
+    <radius>6</radius>
+    <norm>1</norm>
+    <!-- the norm aligns the radius of the cylinder with the surface normal
+        think of it as a scaler multiplied by the normalized radius vector
+        that will equal the surface normal of the cylinder
+        (probably not the normal of the approximating triangles)
+        if [+]1 the surface is convex: it curves out, 
+        if -1 the surface is concave: it curves in -->
+    <error>.2</error>
+    <first_circle>
+      <ctr>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>    
+      <ctr>
+        <x>0</x>
+        <y>0</y>
+        <z>10</z>
+      </ctr>
+    </last_circle>
+    <!-- 2 vectors from circles: axleHAT=(last-first)normalized, NHAT=-axleHAT 
+        using NHAT(x,y,z) calculate: 1)w=sqrt(sqr(x)+sqr(z)), 2)X=x/w or 0, 3)Z=z/w or 1
+        get 2 basis vectors: IHAT=(Z,0,-X), JHAT=(-yX,w,-yZ)
+        by rotating i,j&k -alpha about x axis and then +phi about y axis -->
+    <!-- the angles, if present, represent segments parallel to the axle
+        if the angles are not included, the arcs will be full rotations
+        the arc approximations will be along axleHAT separated by error units
+        they will use an equilateral polygonal section with enough sides to keep the distance to 
+        one of the circles described below less than the error value
+        if the norm is [+]1 the circle used will be the circle circumscribing the polygon
+        if the norm is -1 the circle used will be the circle inscribed in the polygon
+        the arcs will be staggered along the axle so that the evens and odds start at delta_angle/N or delta_angle/2N-->
+  </section>
+
+  <section id="bigcaninner" type="cylinder">
+    <radius>4</radius>
+    <norm>-1</norm>
+    <error>.2</error>
+    <first_circle><ctr><x>0</x><y>0</y><z>0</z></ctr></first_circle>
+    <last_circle><ctr><x>0</x><y>0</y><z>10</z></ctr></last_circle>
+  </section>
+
+  <section id="littlecanouter" type="cylinder">
+    <radius>4.5</radius>
+    <norm>1</norm>
+    <error>.2</error>
+    <first_circle><ctr><x>0</x><y>0</y><z>11</z></ctr></first_circle>
+    <last_circle><ctr><x>0</x><y>0</y><z>21</z></ctr></last_circle>
+  </section>
+
+  <section id="littlecaninner" type="cylinder">
+    <radius>2.5</radius>
+    <norm>-1</norm>
+    <error>.2</error>
+    <first_circle><ctr><x>0</x><y>0</y><z>11</z></ctr></first_circle>
+    <last_circle><ctr><x>0</x><y>0</y><z>21</z></ctr></last_circle>
+  </section>
+
+  <section id="bigcancover" type="plane">
+    <norm>-k</norm>
+    <multiplyer>0</multiplyer>
+    <!-- the origin for the plane is multiplyer * norm -->
+    <verts>
+      <lookup>
+          <section_from>bigcanouter</section_from>
+          <section_part>first_circle</section_part>
+      </lookup>
+    </verts>
+    <verts type="first">
+      <lookup>
+          <section_from>bigcaninner</section_from>
+          <section_part>first_circle</section_part>
+      </lookup>
+    </verts>
+  </section>
+
+  <section id="littlecancover" type="plane">
+    <norm>k</norm>
+    <multiplyer>21</multiplyer>
+    <!-- the origin for the plane is multiplyer * norm -->
+    <verts>
+      <lookup>
+          <section_from>littlecanouter</section_from>
+          <section_part>last_circle</section_part>
+      </lookup>
+    </verts>
+    <verts type="first">
+      <lookup>
+          <section_from>littlecaninner</section_from>
+          <section_part>last_circle</section_part>
+      </lookup>
+    </verts>
+  </section>
+
+  <section id="outer_patch" type="patch">
+      <cylinder_from>bigcanouter</cylinder_from>
+      <cylinder_part>last_circle</cylinder_part>
+      <section_to>littlecanouter</section_to>
+      <section_part>first_circle</section_part>
+  </section>
+
+  <section id="inner_patch" type="patch">
+      <cylinder_from>bigcaninner</cylinder_from>
+      <cylinder_part>last_circle</cylinder_part>
+      <section_to>littlecaninner</section_to>
+      <section_part>first_circle</section_part>
+  </section>
+
+
+</Adapter>

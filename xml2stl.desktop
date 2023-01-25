@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Run xml2stl
+Comment=A Nemo Work-around
+Exec=/home/ash/Projects/xml2stl/xml2stl.sh
+Icon=/home/ash/Projects/xml2stl/share/icons/small.ico
+Terminal=true
+Type=Application

@@ -1,0 +1,901 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jan 25 00:37:46 2023
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 32)
+SRC := src
+# makefile (from 'Makefile', line 22)
+AR = $(FULLCROSS)ar
+# makefile (from 'Makefile', line 35)
+CWD := /home/ash/Projects/xml2stl
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 64)
+BD_ADDS := 
+# environment
+VSCODE_CWD = /home/ash/Projects/xml2stl
+# makefile (from 'Makefile', line 28)
+RSCCPY := windres -O coff
+# environment
+GDM_LANG = en_US
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 43)
+DEBUGFLAG := -ggdb
+# makefile (from 'Makefile', line 58)
+DEPFILE := /home/ash/Projects/xml2stl/dep.txt
+# makefile (from 'Makefile', line 62)
+BDIRS := bin src rsc inc bin/dbg bin/rel 
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/ash/Projects/xml2stl
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 23)
+PKG_CONFIG = $(FULLCROSS)pkg-config
+# makefile (from 'Makefile', line 55)
+ICONFILE := /home/ash/Projects/xml2stl/share/icons/small.ico
+# environment
+XDG_DATA_DIRS = /usr/share/cinnamon:/usr/share/gnome:/home/ash/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+# environment
+OLDPWD = /home/ash
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 30)
+DBG := dbg
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ash/.config/Code/CachedData/97dec172d3256f8ca4bfb2143f3f76b503ca0534
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# makefile (from 'Makefile', line 25)
+CPPSTANDARD := -std=c++17
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/ash/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/ash/Projects/xml2stl
+# makefile (from 'Makefile', line 80)
+BR_ADDS := 
+# makefile (from 'Makefile', line 5)
+BFDHEAD := elf64-x86-64
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from 'Makefile', line 95)
+SRCS := src/SegmentIntersect.cpp src/xml2stl.cpp src/section.cpp src/Model.cpp src/first.cpp src/patch.cpp src/cylinder.cpp src/CompGeo.cpp src/Matrix.cpp src/plane.cpp src/NGons.cpp src/xmlHandler.cpp src/Triangulation.cpp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-cinnamon:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 92)
+allinBLD := bin/dbg/src/CompGeo.cpp.d bin/dbg/src/patch.cpp.d bin/dbg/src/cylinder.cpp.o bin/dbg/src/SegmentIntersect.cpp.o bin/dbg/src/NGons.cpp.o bin/dbg/src/patch.cpp.o bin/dbg/src/xml2stl.cpp.d bin/dbg/src/Triangulation.cpp.d bin/dbg/src/first.cpp.o bin/dbg/src/plane.cpp.o bin/dbg/src/section.cpp.d bin/dbg/src/Triangulation.cpp.o bin/dbg/src/Model.cpp.d bin/dbg/src/first.cpp.d bin/dbg/src/SegmentIntersect.cpp.d bin/dbg/src/xmlHandler.cpp.o bin/dbg/src/xml2stl.cpp.o bin/dbg/src/Model.cpp.o bin/dbg/src/Matrix.cpp.o bin/dbg/src/plane.cpp.d bin/dbg/src/xmlHandler.cpp.d bin/dbg/src/section.cpp.o bin/dbg/src/NGons.cpp.d bin/dbg/src/CompGeo.cpp.o bin/dbg/src/cylinder.cpp.d bin/dbg/src/Matrix.cpp.d bin/dbg/xml2stl
+# environment
+XDG_SESSION_DESKTOP = cinnamon
+# makefile (from 'bin/dbg/src/Triangulation.cpp.d', line 1)
+MAKEFILE_LIST := Makefile bin/dbg/src/SegmentIntersect.cpp.d bin/dbg/src/xml2stl.cpp.d bin/dbg/src/section.cpp.d bin/dbg/src/Model.cpp.d bin/dbg/src/first.cpp.d bin/dbg/src/patch.cpp.d bin/dbg/src/cylinder.cpp.d bin/dbg/src/CompGeo.cpp.d bin/dbg/src/Matrix.cpp.d bin/dbg/src/plane.cpp.d bin/dbg/src/NGons.cpp.d bin/dbg/src/xmlHandler.cpp.d bin/dbg/src/Triangulation.cpp.d
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 8536
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 79)
+MD_RES :=  [bin/dbg/src_PRESENT]  [bin/dbg/rsc_PRESENT]
+# makefile (from 'Makefile', line 42)
+BLD := bin/dbg
+# environment
+SESSION_MANAGER = local/ashX:@/tmp/.ICE-unix/1414,unix/ashX:/tmp/.ICE-unix/1414
+# makefile (from 'Makefile', line 34)
+RSC := rsc
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 99)
+DEL_BLD := 
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 84)
+RF_RES := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'Makefile', line 93)
+allinRSC := 
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 97)
+OBJS := bin/dbg/src/SegmentIntersect.cpp.o bin/dbg/src/xml2stl.cpp.o bin/dbg/src/section.cpp.o bin/dbg/src/Model.cpp.o bin/dbg/src/first.cpp.o bin/dbg/src/patch.cpp.o bin/dbg/src/cylinder.cpp.o bin/dbg/src/CompGeo.cpp.o bin/dbg/src/Matrix.cpp.o bin/dbg/src/plane.cpp.o bin/dbg/src/NGons.cpp.o bin/dbg/src/xmlHandler.cpp.o bin/dbg/src/Triangulation.cpp.o
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 56)
+USETERMINAL := true
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US
+# automatic
+^F = $(notdir $^)
+# environment
+CINNAMON_VERSION = 5.6.7
+# makefile (from 'Makefile', line 29)
+REL := rel
+# makefile (from 'Makefile', line 27)
+OBJCPY := ld -r -b binary
+# makefile (from 'Makefile', line 100)
+RUN_DT := xml2stl.desktop
+# makefile (from 'Makefile', line 85)
+RD_RES := 
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 33)
+INC := inc
+# environment
+XDG_SEAT = seat0
+# makefile (from 'Makefile', line 59)
+DIRFILE := /home/ash/Projects/xml2stl/dir.txt
+# makefile (from 'Makefile', line 78)
+ADIRS := 
+# environment
+XDG_CURRENT_DESKTOP = X-Cinnamon
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = cinnamon
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = ash
+# makefile (from 'Makefile', line 94)
+allinSRC := src/SegmentIntersect.cpp src/xml2stl.cpp src/section.cpp src/Model.cpp src/first.cpp src/patch.cpp src/cylinder.cpp src/CompGeo.cpp src/Matrix.cpp src/plane.cpp src/NGons.cpp src/xmlHandler.cpp src/Triangulation.cpp
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /home/ash/Projects/xml2stl/launch.desktop
+# makefile (from 'Makefile', line 53)
+EXE := xml2stl
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+USER = ash
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'Makefile', line 57)
+LOGFILE := /home/ash/Projects/xml2stl/log.txt
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8517
+# makefile (from 'Makefile', line 91)
+allinBIN := bin/dbg/src/CompGeo.cpp.d bin/dbg/src/patch.cpp.d bin/dbg/src/cylinder.cpp.o bin/dbg/src/SegmentIntersect.cpp.o bin/dbg/src/NGons.cpp.o bin/dbg/src/patch.cpp.o bin/dbg/src/xml2stl.cpp.d bin/dbg/src/Triangulation.cpp.d bin/dbg/src/first.cpp.o bin/dbg/src/plane.cpp.o bin/dbg/src/section.cpp.d bin/dbg/src/Triangulation.cpp.o bin/dbg/src/Model.cpp.d bin/dbg/src/first.cpp.d bin/dbg/src/SegmentIntersect.cpp.d bin/dbg/src/xmlHandler.cpp.o bin/dbg/src/xml2stl.cpp.o bin/dbg/src/Model.cpp.o bin/dbg/src/Matrix.cpp.o bin/dbg/src/plane.cpp.d bin/dbg/src/xmlHandler.cpp.d bin/dbg/src/section.cpp.o bin/dbg/src/NGons.cpp.d bin/dbg/src/CompGeo.cpp.o bin/dbg/src/cylinder.cpp.d bin/dbg/src/Matrix.cpp.d bin/dbg/xml2stl  
+# makefile (from 'Makefile', line 46)
+CXX_FLAGS := -std=c++17  -ggdb
+# environment
+_ = /usr/bin/code
+# makefile (from 'Makefile', line 31)
+BIN := bin
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 48)
+CFLAGS := -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include -I/usr/include/atkmm-1.6 -I/usr/lib/x86_64-linux-gnu/atkmm-1.6/include -I/usr/include/gtk-3.0/unix-print -I/usr/include/gdkmm-3.0 -I/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include -I/usr/include/giomm-2.4 -I/usr/lib/x86_64-linux-gnu/giomm-2.4/include -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pangomm-1.4 -I/usr/lib/x86_64-linux-gnu/pangomm-1.4/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/cairomm-1.0 -I/usr/lib/x86_64-linux-gnu/cairomm-1.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+GTK_OVERLAY_SCROLLING = 1
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 49)
+LIBRARIES := -lgtkmm-3.0 -latkmm-1.6 -lgdkmm-3.0 -lgiomm-2.4 -lgtk-3 -lgdk-3 -latk-1.0 -lcairo-gobject -lgio-2.0 -lpangomm-1.4 -lglibmm-2.4 -lcairomm-1.0 -lsigc-2.0 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lcairo -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -lepoxy -lGLU
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'Makefile', line 37)
+ACT_ONS := src rsc
+# environment
+HOME = /home/ash
+# makefile (from 'Makefile', line 74)
+ODIRS := bin/dbg/src bin/dbg/rsc
+# makefile (from 'Makefile', line 63)
+BD_CHK :=  [bin_exists]  [src_exists]  [rsc_exists]  [inc_exists]  [bin/dbg_exists]  [bin/rel_exists]
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-ca705876-1.74.3-main.sock
+# environment
+XDG_SESSION_ID = c2
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 96)
+ 
+DEPS := bin/dbg/src/SegmentIntersect.cpp.d bin/dbg/src/xml2stl.cpp.d bin/dbg/src/section.cpp.d bin/dbg/src/Model.cpp.d bin/dbg/src/first.cpp.d bin/dbg/src/patch.cpp.d bin/dbg/src/cylinder.cpp.d bin/dbg/src/CompGeo.cpp.d bin/dbg/src/Matrix.cpp.d bin/dbg/src/plane.cpp.d bin/dbg/src/NGons.cpp.d bin/dbg/src/xmlHandler.cpp.d bin/dbg/src/Triangulation.cpp.d
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 21)
+LD = $(FULLCROSS)ld
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/ash
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 24)
+CXX := g++
+# makefile (from 'Makefile', line 20)
+CC = $(FULLCROSS)gcc
+# makefile (from 'Makefile', line 101)
+RUN_SH := xml2stl.sh
+# environment
+INSIDE_NEMO_PYTHON = 
+# environment
+GDMSESSION = cinnamon
+# variable set hash-table stats:
+# Load=142/1024=14%, Rehash=0, Collisions=35/425=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 2048, inode 9315618): No files, no impossibilities so far.
+# . (device 2048, inode 9310653): 21 files, no impossibilities.
+# rsc (device 2048, inode 9315615): No files, no impossibilities so far.
+
+# 21 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+bin/dbg/rsc/%.o: rsc/%
+#  recipe to execute (from 'Makefile', line 152):
+	@if [ $(suffix $<) = ".rc" ]; then \
+	$(RSCCPY) $< $@ ; \
+	else \
+	$(OBJCPY) $< -o $@ ; fi ;
+	@echo resource $< made into object $@ >> $(LOGFILE) ;
+
+bin/dbg/src/%.o: src/%
+#  recipe to execute (from 'Makefile', line 159):
+	@$(CXX) $(CXX_FLAGS) -I$(INC) $(CFLAGS) -c $< -o $@
+	@echo new object file compiled [$@] due to [$?] >> $(LOGFILE)
+
+bin/dbg/src/%.d: src/%
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# 3 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+inc/Model.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-23 16:01:27.354060748
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/SegmentIntersect.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-02-28 01:45:26.622718
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/Model.cpp.o: src/Model.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/Triangulation.cpp.o: src/Triangulation.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/Model.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-23 16:01:41.922074429
+#  File has been updated.
+#  Successfully updated.
+
+compile: prepbld make_exe
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 114):
+	@printf \# > $(RUN_DT)
+	@echo !/usr/bin/env xdg-open >> $(RUN_DT)
+	@echo [Desktop Entry] >> $(RUN_DT)
+	@echo Name=Run $(EXE) >> $(RUN_DT)
+	@echo Comment=A Nemo Work-around >> $(RUN_DT)
+	@echo Exec=$(CWD)/$(EXE).sh >> $(RUN_DT)
+	@echo Icon=$(ICONFILE) >> $(RUN_DT)
+	@echo Terminal=$(USETERMINAL) >> $(RUN_DT)
+	@echo Type=Application >> $(RUN_DT)
+	@printf \# > $(RUN_SH)
+	@echo !/bin/bash >> $(RUN_SH)
+	@echo cd $(CWD) >> $(RUN_SH)
+	@echo $(EXE_PFX)./$(BLD)/$(EXE) >> $(RUN_SH)
+	@echo echo \"Press 'Enter' To Exit\" >> $(RUN_SH)
+	@echo read extKey >> $(RUN_SH)
+	@chmod a+x $(EXE).*
+	@echo compile completed >> $(LOGFILE)
+
+logsetup:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := logsetup
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=29/82=35%
+#  recipe to execute (from 'Makefile', line 168):
+	@echo BUILD LOG `date` > $(LOGFILE)
+	@echo -----\>Cross Compile Variables: >> $(LOGFILE)
+	@echo [FULLCROSS=$(FULLCROSS)] - [BFDHEAD=$(BFDHEAD)] - [LINK_TYPE=$(LINK_TYPE)] >> $(LOGFILE) 
+	@echo -----\>User Variables: >> $(LOGFILE)
+	@echo [RELEASE_DIR=$(RELEASE_DIR)] - [MAKECMDGOALS=$(MAKECMDGOALS)] - [MAKE_RESTARTS=$(MAKE_RESTARTS)] [MAKEFILE_LIST=$(MAKEFILE_LIST)] >> $(LOGFILE)
+	@echo [necessary build directories=$(ODIRS)] - [checks=$(MD_RES)] >> $(LOGFILE)
+	@if [ -f $(DIRFILE) ]; then \
+	echo -------\>UPDATED THESE FILES AND DIRECTORIES: >> $(LOGFILE) ; \
+	cat $(DIRFILE) >> $(LOGFILE) ; \
+	$(RM) $(DIRFILE) ; fi ; 
+	@echo [CXX=$(CXX)] - [CXX_FLAGS=$(CXX_FLAGS)] >> $(LOGFILE)
+	@echo [BIN=$(BIN)] - [BLD=$(BLD)] - [SRC=$(SRC)] >> $(LOGFILE)
+	@echo [INC=$(INC)] - [DBG=$(DBG)] - [REL=$(REL)] >> $(LOGFILE)
+	@echo [RSC=$(RSC)] - [CWD=$(CWD)] >> $(LOGFILE)
+	@echo [CFLAGS=$(CFLAGS)] >> $(LOGFILE)
+	@echo [EXE=$(EXE)] - [ICONFILE=$(ICONFILE)] >> $(LOGFILE)
+	@echo [LIBRARIES=$(LIBRARIES)] >> $(LOGFILE)
+	@echo [USETERMINAL=$(USETERMINAL)] - [LOGFILE=$(LOGFILE)] >> $(LOGFILE)
+	@echo [DEBUGFLAG=$(DEBUGFLAG)] >> $(LOGFILE)
+	@echo -----\>Calculated/Environmental Variables: >> $(LOGFILE)
+	@echo [SRCS=$(SRCS)] >> $(LOGFILE)
+	@echo [DEPS=$(DEPS)] >> $(LOGFILE)
+	@echo [DEL_BLD=$(DEL_BLD)] >> $(LOGFILE)
+	@echo [allinBIN=$(allinBIN)] >> $(LOGFILE)
+	@echo [allinBLD=$(allinBLD)] >> $(LOGFILE)
+	@echo [allinRSC=$(allinRSC)] >> $(LOGFILE)
+	@echo [allinSRC=$(allinSRC)] >> $(LOGFILE)
+	@echo [OBJS=$(OBJS)] >> $(LOGFILE)
+	@if [ -f $(DEPFILE) ]; then \
+	echo -------\>MADE DEPENDS FILES WHEN INCLUDING: >> $(LOGFILE) ; \
+	cat $(DEPFILE) >> $(LOGFILE) ; \
+	$(RM) $(DEPFILE) ; fi ; 
+	@echo -----\>MAKE OUTPUT FOLLOWS: >> $(LOGFILE)
+
+# Not a target:
+src/cylinder.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-13 02:11:39.147074867
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/Model.cpp.d: src/Model.cpp src/Model.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Model.cpp'
+#  Last modified 2023-01-25 00:37:46.289377327
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+bin/dbg/src/SegmentIntersect.cpp.o: src/SegmentIntersect.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+inc/section.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-21 01:03:55.037064729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/NGons.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-18 16:52:17.324368062
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/section.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-20 02:34:59.021499376
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-25 00:28:21.058720314
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/xmlHandler.cpp.o: src/xmlHandler.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+inc/plane.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-12 17:25:13.909100225
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/patch.cpp.o: src/patch.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/Model.hpp inc/section.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+inc/NGons.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-13 04:03:57.226837949
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/xml2stl: bin/dbg/src/SegmentIntersect.cpp.o bin/dbg/src/xml2stl.cpp.o bin/dbg/src/section.cpp.o bin/dbg/src/Model.cpp.o bin/dbg/src/first.cpp.o bin/dbg/src/patch.cpp.o bin/dbg/src/cylinder.cpp.o bin/dbg/src/CompGeo.cpp.o bin/dbg/src/Matrix.cpp.o bin/dbg/src/plane.cpp.o bin/dbg/src/NGons.cpp.o bin/dbg/src/xmlHandler.cpp.o bin/dbg/src/Triangulation.cpp.o
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 147):
+	@$(CXX) $^ -o $@ $(LIBRARIES)
+	@chmod a+x $(BLD)/$(EXE)
+	@echo linked all objects into $@ >> $(LOGFILE)
+
+# Not a target:
+src/CompGeo.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-04 17:01:36.113798
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/first.cpp.d: src/first.cpp src/first.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'first.cpp'
+#  Last modified 2023-01-25 00:37:46.245377688
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+bin/dbg/src/xmlHandler.cpp.d: src/xmlHandler.cpp src/xmlHandler.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'xmlHandler.cpp'
+#  Last modified 2023-01-25 00:37:45.813381246
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+bin/dbg/src/patch.cpp.d: src/patch.cpp src/patch.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/Model.hpp inc/section.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'patch.cpp'
+#  Last modified 2023-01-25 00:37:46.177378249
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 134):
+	@$(RM) $(allinBIN)
+	@echo deleted $(words $(allinBIN)) files [$(allinBIN)] >> $(LOGFILE)
+
+prepbld:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 139):
+	@$(RM) $(DEL_BLD)
+	@echo deleted $(words $(DEL_BLD)) build files [$(DEL_BLD)] >> $(LOGFILE)
+
+bin/dbg/src/Triangulation.cpp.d: src/Triangulation.cpp src/Triangulation.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Triangulation.cpp'
+#  Last modified 2023-01-25 00:37:45.761381674
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# Not a target:
+src/xml2stl.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-21 03:14:03.490003318
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/CompGeo.cpp.d: src/CompGeo.cpp src/CompGeo.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'CompGeo.cpp'
+#  Last modified 2023-01-25 00:37:46.029379467
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# Not a target:
+inc/SegmentIntersect.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-02-28 01:36:26.202047
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/plane.cpp.d: src/plane.cpp src/plane.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'plane.cpp'
+#  Last modified 2023-01-25 00:37:45.941380191
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# Not a target:
+inc/CompGeo.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-13 04:06:40.350030595
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/SegmentIntersect.cpp.d: src/SegmentIntersect.cpp src/SegmentIntersect.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'SegmentIntersect.cpp'
+#  Last modified 2023-01-25 00:37:46.457375946
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# Not a target:
+src/Triangulation.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-20 00:15:05.034763829
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/NGons.cpp.d: src/NGons.cpp src/NGons.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'NGons.cpp'
+#  Last modified 2023-01-25 00:37:45.873380751
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+all: logsetup compile
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/74=0%
+#  recipe to execute (from 'Makefile', line 105):
+	@echo all completed >> $(LOGFILE)
+
+# Not a target:
+inc/Triangulation.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-10 22:34:05.118776
+#  File has been updated.
+#  Successfully updated.
+
+run: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 109):
+	$(EXE_PFX)./$(BLD)/$(EXE)
+	@echo run completed >> $(LOGFILE)
+
+ 
+# Not a target:
+src/Matrix.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-13 21:21:47.034061297
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+inc/xmlHandler.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-27 15:04:26.405358515
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/plane.cpp.o: src/plane.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+inc/first.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-10 15:51:27.833207953
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/patch.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 23:21:22.51406906
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+inc/cylinder.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-18 22:12:06.95975398
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/xml2stl.cpp.o: src/xml2stl.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/CompGeo.cpp.o: src/CompGeo.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/xmlHandler.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-06 22:33:11.403413843
+#  File has been updated.
+#  Successfully updated.
+
+logclear:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 204):
+	@$(RM) $(LOGFILE)
+
+# Not a target:
+src/plane.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-13 04:10:39.544845615
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+inc/Matrix.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-13 18:12:58.162652
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+inc/patch.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-20 22:11:07.541511723
+#  File has been updated.
+#  Successfully updated.
+
+bin/dbg/src/section.cpp.d: src/section.cpp src/section.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'section.cpp'
+#  Last modified 2023-01-25 00:37:46.341376899
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+bin/dbg/src/cylinder.cpp.o: src/cylinder.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/Matrix.cpp.o: src/Matrix.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/first.cpp.o: src/first.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+PHONY: prepbld
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/cylinder.cpp.d: src/cylinder.cpp src/cylinder.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'cylinder.cpp'
+#  Last modified 2023-01-25 00:37:46.101378873
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+make_exe: bin/dbg/xml2stl
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 144):
+	@echo make_exe completed >> $(LOGFILE)
+
+bin/dbg/src/xml2stl.cpp.d: src/xml2stl.cpp src/xml2stl.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp inc/Model.hpp inc/cylinder.hpp inc/plane.hpp inc/patch.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'xml2stl.cpp'
+#  Last modified 2023-01-25 00:37:46.413376308
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# Not a target:
+src/first.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-04 22:01:12.21204655
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all run compile clean make_exe logsetup logclear
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/section.cpp.o: src/section.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp inc/xmlHandler.hpp inc/section.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/NGons.cpp.o: src/NGons.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/dbg/src/Matrix.cpp.d: src/Matrix.cpp src/Matrix.cpp inc/first.hpp inc/CompGeo.hpp inc/Matrix.hpp inc/NGons.hpp inc/SegmentIntersect.hpp inc/Triangulation.hpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Matrix.cpp'
+#  Last modified 2023-01-25 00:37:45.985379828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(CXX) -I$(INC) $< -MM -MT '$@ $(subst .d,.o,$@)' -MF $@
+	@echo new depend file compiled [$@] due to [$?] >> $(DEPFILE)
+
+# files hash-table stats:
+# Load=65/1024=6%, Rehash=0, Collisions=10/308=3%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+ 
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 105 / storage = 1664 B / avg = 15 B
+# current buf: size = 8162 B / used = 1664 B / count = 105 / avg = 15 B
+
+# strcache performance: lookups = 342 / hit rate = 69%
+# hash-table stats:
+# Load=105/8192=1%, Rehash=0, Collisions=3/342=1%
+# Finished Make data base on Wed Jan 25 00:37:46 2023
+
+ 

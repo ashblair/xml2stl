@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlugTop>
+
+  <transform> 
+    <!-- will fill out a static matrix in class Model
+        can be translate:[x,y,z] 
+        or rotate:[axis:char in {x,y,z}: angle in radians]
+        transform multiplication will be matrix * position vector (i.e. a 1 column matrix) -->
+    <translate>
+      <x>128</x>
+      <y>100</y>
+      <z>0</z>
+    </translate>
+  </transform>
+
+  <section id="top_cylinder" type="cylinder">
+    <radius>26.75</radius>
+    <norm>1</norm>
+    <!-- the norm aligns the radius of the cylinder with the surface normal
+        think of it as a scaler multiplied by the normalized radius vector
+        that will equal the surface normal of the cylinder
+        (probably not the normal of the approximating triangles)
+        if [+]1 the surface is convex: it curves out, 
+        if -1 the surface is concave: it curves in -->
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>0</x>
+        <y>0</y>
+        <z>-21.38924964</z><!-- =(26.75-4)*cos(theta/2) theta/2=asin(15.5/2/22.75) ~ 0.347618095-->
+      </ctr>
+    </first_circle>
+    <last_circle>    
+      <ctr>
+        <x>0</x>
+        <y>11.5</y>
+        <z>-21.38924964</z>
+      </ctr>
+    </last_circle>
+    <!-- 2 vectors from circles: axleHAT=(last-first)normalized, NHAT=-axleHAT 
+        using NHAT(x,y,z) calculate: 1)w=sqrt(sqr(x)+sqr(z)), 2)X=x/w or 0, 3)Z=z/w or 1
+        get 2 basis vectors: IHAT=(Z,0,-X), JHAT=(-yX,w,-yZ)
+        by rotating i,j&k -alpha about x axis and then +phi about y axis -->
+        <start_angle>1.24193657474002</start_angle>
+        <end_angle>1.89965607925998</end_angle>
+    <!-- the angles, if present, represent segments parallel to the axle
+        if the angles are not included, the arcs will be full rotations
+        the arc approximations will be along axleHAT separated by error units
+        they will use an equilateral polygonal section with enough sides to keep the distance to 
+        one of the circles described below less than the error value
+        if the norm is [+]1 the circle used will be the circle circumscribing the polygon
+        if the norm is -1 the circle used will be the circle inscribed in the polygon
+        the arcs will be staggered along the axle so that the evens and odds start at delta_angle/N or delta_angle/2N-->
+  </section>
+
+
+
+
+
+  <section id="right_bottom_cylinder" type="cylinder">
+    <radius>1.5</radius>
+    <norm>-1</norm>
+    <error>0.2</error>
+    <first_circle>
+      <ctr>
+        <x>7.7</x>
+        <y>0</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>7.7</x>
+        <y>15</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>0</start_angle>
+    <end_angle>3.141592654</end_angle>
+  </section>
+
+  <section id="left_bottom_cylinder" type="cylinder">
+    <radius>1.5</radius>
+    <norm>-1</norm>
+    <error>0.2</error>
+    <first_circle>
+      <ctr>
+        <x>-7.7</x>
+        <y>0</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>-7.7</x>
+        <y>15</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>0</start_angle>
+    <end_angle>3.141592654</end_angle>
+  </section>
+
+  <section id="right_cylinder" type="cylinder">
+    <radius>4</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>7.75</x>
+        <y>0</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>7.75</x>
+        <y>31.5</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>0</start_angle>
+    <end_angle>1.223178232</end_angle>
+  </section>
+
+  <section id="left_cylinder" type="cylinder">
+    <radius>4</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>-7.75</x>
+        <y>0</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>-7.75</x>
+        <y>31.5</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>1.918414422</start_angle>
+    <end_angle>3.141592654</end_angle>
+  </section>
+  <section id="front" type="plane">
+    <norm>-j</norm>
+    <multiplyer>0</multiplyer>
+    <!-- the origin for the plane is multiplyer * norm -->
+    <verts>
+      <lookup>
+          <section_from>right_cylinder</section_from>
+          <section_part>first_circle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <lookup>
+          <section_from>top_cylinder</section_from>
+          <section_part>first_circle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <lookup>
+          <section_from>left_cylinder</section_from>
+          <section_part>first_circle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <lookup>
+          <section_from>left_bottom_cylinder</section_from>
+          <section_part>-first_circle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <lookup>
+          <section_from>right_bottom_cylinder</section_from>
+          <section_part>-first_circle</section_part>
+      </lookup>
+    </verts>
+  </section>
+  <section id="top_rear_cylinder" type="cylinder">
+    <radius>26.75</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>0</x>
+        <y>34</y>
+        <z>-21.38924964</z>
+      </ctr>
+    </first_circle>
+    <last_circle>    
+      <ctr>
+        <x>0</x>
+        <y>38.5</y>
+        <z>-21.38924964</z>
+      </ctr>
+    </last_circle>
+    <start_angle>1.223178232</start_angle>
+    <end_angle>1.918414422</end_angle>
+  </section>
+  <section id="right_rear_cylinder" type="cylinder">
+    <radius>4</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>7.75</x>
+        <y>34</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>7.75</x>
+        <y>38.5</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>0</start_angle>
+    <end_angle>
+      <value>1.223178232</value>
+      <seam>
+        <section_from>top_rear_cylinder</section_from>
+        <section_part>start_angle</section_part>
+      </seam>
+    </end_angle>
+  </section>
+  <section id="left_rear_cylinder" type="cylinder">
+    <radius>4</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>-7.75</x>
+        <y>34</y>
+        <z>0</z>
+      </ctr>
+    </first_circle>
+    <last_circle>
+      <ctr>
+        <x>-7.75</x>
+        <y>38.5</y>
+        <z>0</z>
+      </ctr>
+    </last_circle>
+    <start_angle>
+      <value>1.918414422</value>
+      <seam>
+        <section_from>top_rear_cylinder</section_from>
+        <section_part>end_angle</section_part>
+      </seam>
+    </start_angle>
+    <end_angle>3.141592654</end_angle>
+  </section>
+  <section id="top_slot_cylinder" type="cylinder">
+    <radius>26.75</radius>
+    <norm>1</norm>
+    <error>1</error>
+    <first_circle>
+      <ctr>
+        <x>0</x>
+        <y>31.5</y>
+        <z>-21.38924964</z>
+      </ctr>
+    </first_circle>
+    <last_circle>    
+      <ctr>
+        <x>0</x>
+        <y>34</y>
+        <z>-21.38924964</z>
+      </ctr>
+      <seam>
+        <section_from>top_rear_cylinder</section_from>
+        <section_part>first_circle</section_part>
+      </seam>
+    </last_circle>
+    <start_angle>1.223178232</start_angle>
+    <end_angle>1.918414422</end_angle>
+  </section>
+  <section id="right_inner_slot" type = "plane">
+    <norm><x>0.809740063655583</x><y>0</y><z>-0.58678874334044</z></norm>
+    <multiplyer>5.17210342859857</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>top_slot_cylinder</section_from>
+          <section_part>-start_angle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <vtx> <!-- right_slot_bottom_front = verts[1] -->
+        <x>6.38736263739877</x>
+        <y>31.5</y>
+        <z>0</z>
+      </vtx>
+    </verts>
+    <verts>
+      <vtx> <!-- right_slot_bottom_back = verts[2] -->
+        <x>6.38736263739877</x>
+        <y>34</y>
+        <z>0</z>
+      </vtx>
+    </verts>
+  </section>
+  <section id="right_front_slot" type="plane">
+    <norm>j</norm>
+    <multiplyer>31.5</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>right_cylinder</section_from>
+          <section_part>-last_circle</section_part>
+          <section_from>right_inner_slot</section_from>
+          <section_part>1</section_part> <!-- right_slot_bottom_front -->
+      </lookup>
+    </verts>
+  </section>
+  <section id="right_back_slot" type="plane">
+    <norm>-j</norm>
+    <multiplyer>34</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>right_rear_cylinder</section_from>
+          <section_part>first_circle</section_part>
+          <section_from>right_inner_slot</section_from>
+          <section_part>2</section_part> <!-- right_slot_bottom_back -->
+      </lookup>
+    </verts>
+  </section>
+  <section id="left_inner_slot" type = "plane">
+    <norm><x>-0.809740063655583</x><y>0</y><z>-0.58678874334044</z></norm>
+    <multiplyer>5.17210342859857</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>top_slot_cylinder</section_from>
+          <section_part>end_angle</section_part>
+      </lookup>
+    </verts>
+    <verts>
+      <vtx> <!-- left_slot_bottom_back = verts[1] -->
+        <x>-6.38736263739877</x>
+        <y>34</y>
+        <z>0</z>
+      </vtx>
+    </verts>
+    <verts>
+      <vtx> <!-- left_slot_bottom_front = verts[2] -->
+        <x>-6.38736263739877</x>
+        <y>31.5</y>
+        <z>0</z>
+      </vtx>
+    </verts>
+  </section>
+  <section id="left_front_slot" type="plane">
+    <norm>j</norm>
+    <multiplyer>31.5</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>left_cylinder</section_from>
+          <section_part>-last_circle</section_part>
+          <section_from>left_inner_slot</section_from>
+          <section_part>2</section_part> <!-- left_slot_bottom_front -->
+      </lookup>
+    </verts>
+  </section>
+  <section id="left_back_slot" type="plane">
+    <norm>-j</norm>
+    <multiplyer>34</multiplyer>
+    <verts>
+      <lookup>
+          <section_from>left_rear_cylinder</section_from>
+          <section_part>first_circle</section_part>
+          <section_from>left_inner_slot</section_from>
+          <section_part>1</section_part> <!-- left_slot_bottom_back -->
+      </lookup>
+    </verts>
+  </section>
+
+    <section id="feed_top" type="plane">
+      <norm>-k</norm>
+      <multiplyer>-2</multiplyer>
+      <verts>
+        <vtx><x>4</x><y>38.5</y><z>2</z></vtx><!-- 0 back right -->
+      </verts>
+      <verts>
+        <vtx><x>4</x><y>28.5</y><z>2</z></vtx><!-- 1 front right -->
+      </verts>
+      <verts>
+        <vtx><x>-4</x><y>28.5</y><z>2</z></vtx><!-- 2 front left -->
+      </verts>
+      <verts>
+        <vtx><x>-4</x><y>38.5</y><z>2</z></vtx><!-- 3 back left -->
+      </verts>
+    </section>
+
+    <section id="feed_right" type="plane">
+      <norm>-i</norm>
+      <multiplyer>-1.6</multiplyer>
+      <verts>
+        <vtx><x>4</x><y>38.5</y><z>0</z></vtx><!-- 0 back bottom -->
+      </verts>
+      <verts>
+        <vtx><x>4</x><y>28.5</y><z>0</z></vtx><!-- 1 front bottom -->
+      </verts>
+      <verts>
+        <lookup><!-- top parts: -->
+          <section_from>feed_top</section_from>
+          <section_part>1</section_part><!-- front right -->
+          <section_from>feed_top</section_from>
+          <section_part>0</section_part><!-- back right -->
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="feed_left" type="plane">
+      <norm>i</norm>
+      <multiplyer>-1.6</multiplyer>
+      <verts>
+        <vtx><x>-4</x><y>38.5</y><z>0</z></vtx><!-- 0 back bottom -->
+      </verts>
+      <verts> <!-- top parts: -->
+        <lookup>
+          <section_from>feed_top</section_from>
+          <section_part>3</section_part><!-- top's back left -->
+          <section_from>feed_top</section_from>
+          <section_part>2</section_part><!-- top's front left -->
+        </lookup>
+      </verts>
+      <verts>
+        <vtx><x>-4</x><y>28.5</y><z>0</z></vtx><!-- 2 front bottom -->
+      </verts>
+    </section>
+
+    <section id="tri_top" type="plane">
+      <norm>-k</norm>
+      <multiplyer>-2</multiplyer>
+      <verts>
+        <vtx><x>9.25</x><y>20</y><z>2</z></vtx><!-- 0 right front -->
+      </verts>
+      <verts>
+        <vtx><x>-9.25</x><y>20</y><z>2</z></vtx><!-- 1 left front -->
+      </verts>
+      <verts>
+        <lookup>
+          <section_from>feed_top</section_from>
+          <section_part>2</section_part><!-- top's front left -->
+          <section_from>feed_top</section_from>
+          <section_part>1</section_part><!-- top's front right -->
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="tri_right" type="plane">
+      <norm><x>-0.850797997359292</x><y>-0.525492880721916</y><z>0</z></norm>
+      <multiplyer>-18.3797390900118</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>feed_top</section_from>
+          <section_part>1</section_part><!-- feed top's front right -->
+          <section_from>feed_right</section_from>
+          <section_part>1</section_part><!-- feed_right's front bottom -->
+        </lookup>
+      </verts>
+      <verts>
+        <vtx><x>9.25</x><y>20</y><z>0</z></vtx> <!-- 1 front bottom -->
+      </verts>
+      <verts>
+        <lookup>
+          <section_from>tri_top</section_from>
+          <section_part>0</section_part><!-- top's right front -->
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="tri_left" type="plane">
+      <norm><x>0.850797997359292</x><y>-0.525492880721916</y><z>0</z></norm>
+      <multiplyer>-18.3797390900118</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>feed_left</section_from>
+          <section_part>2</section_part><!-- feed left's front bottom -->
+        </lookup>
+      </verts>
+      <verts>
+        <lookup>
+          <section_from>feed_top</section_from>
+          <section_part>2</section_part><!-- feed top's front left -->
+        </lookup>
+      </verts>
+      <verts>
+        <lookup>
+          <section_from>tri_top</section_from>
+          <section_part>1</section_part><!-- top's left front -->
+        </lookup>
+      </verts>
+      <verts>
+        <vtx><x>-9.25</x><y>20</y><z>0</z></vtx><!-- 3 front bottom -->
+      </verts>
+    </section>
+
+    <section id="tri_front" type="plane">
+      <norm>j</norm>
+      <multiplyer>20</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>tri_left</section_from>
+          <section_part>3</section_part><!-- left's front bottom -->
+          <section_from>tri_top</section_from>
+          <section_part>1</section_part><!-- top's front left -->
+          <section_from>tri_top</section_from>
+          <section_part>0</section_part><!-- top's front right -->
+          <section_from>tri_right</section_from>
+          <section_part>1</section_part><!-- right's front bottom -->
+          <section_from>right_bottom_cylinder</section_from>
+          <section_part>last_circle</section_part>
+          <section_from>left_bottom_cylinder</section_from>
+          <section_part>last_circle</section_part>
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="bottom_left" type="plane">
+      <norm>-k</norm>
+      <multiplyer>0</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>left_cylinder</section_from>
+          <section_part>end_angle</section_part>
+          <section_from>left_inner_slot</section_from>
+          <section_part>2</section_part> <!-- left_slot_bottom_front -->
+          <section_from>left_inner_slot</section_from>
+          <section_part>1</section_part> <!-- left_slot_bottom_back -->
+          <section_from>left_rear_cylinder</section_from>
+          <section_part>end_angle</section_part>
+          <section_from>feed_left</section_from>
+          <section_part>0</section_part>
+          <section_from>feed_left</section_from>
+          <section_part>2</section_part>
+          <section_from>tri_left</section_from>
+          <section_part>3</section_part><!-- front bottom -->
+          <section_from>left_bottom_cylinder</section_from>
+          <section_part>-end_angle</section_part>
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="bottom_right" type="plane">
+      <norm>-k</norm>
+      <multiplyer>0</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>right_rear_cylinder</section_from>
+          <section_part>-start_angle</section_part>
+          <section_from>right_inner_slot</section_from>
+          <section_part>2</section_part> <!-- right_slot_bottom_back -->
+          <section_from>right_inner_slot</section_from>
+          <section_part>1</section_part> <!-- right_slot_bottom_front -->
+          <section_from>right_cylinder</section_from>
+          <section_part>-start_angle</section_part>
+          <section_from>right_bottom_cylinder</section_from>
+          <section_part>start_angle</section_part>
+          <section_from>tri_right</section_from>
+          <section_part>1</section_part><!-- tri right's front bottom -->
+          <section_from>feed_right</section_from>
+          <section_part>1</section_part><!-- feed_right's front bottom -->
+          <section_from>feed_right</section_from>
+          <section_part>0</section_part><!-- feed_right's back bottom -->
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="bottom_middle" type="plane">
+      <norm>-k</norm>
+      <multiplyer>0</multiplyer>
+      <verts>
+        <lookup>
+          <section_from>left_bottom_cylinder</section_from>
+          <section_part>start_angle</section_part>
+          <section_from>right_bottom_cylinder</section_from>
+          <section_part>-end_angle</section_part>
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="back" type="plane">
+      <norm>j</norm>
+      <multiplyer>38.5</multiplyer>
+      <verts>
+        <lookup>
+            <section_from>left_rear_cylinder</section_from>
+            <section_part>-last_circle</section_part>
+        </lookup>
+      </verts>
+      <verts>
+        <lookup>
+            <section_from>top_rear_cylinder</section_from>
+            <section_part>-last_circle</section_part>
+        </lookup>
+      </verts>
+      <verts>
+        <lookup>
+            <section_from>right_rear_cylinder</section_from>
+            <section_part>-last_circle</section_part>
+        </lookup>
+      </verts>
+      <verts>
+        <lookup>
+          <section_from>feed_right</section_from>
+          <section_part>0</section_part>
+          <section_from>feed_top</section_from>
+          <section_part>0</section_part>
+          <section_from>feed_top</section_from>
+          <section_part>3</section_part>
+          <section_from>feed_left</section_from>
+          <section_part>0</section_part>
+        </lookup>
+      </verts>
+    </section>
+
+    <section id="wedge_top" type="plane">
+        <norm><x>0</x><y>0.0933407086930583</y><z>0.995634226059288</z></norm>
+        <multiplyer>7.88044489925927</multiplyer>
+        <verts>
+            <vtx><x>-2</x><y>12</y><z>6.79</z></vtx><!-- 0 left front -->
+        </verts>
+        <verts>
+            <vtx><x>2</x><y>12</y><z>6.79</z></vtx><!-- 1 right front -->
+        </verts>
+        <verts>
+            <vtx><x>2</x><y>28</y><z>5.29</z></vtx><!-- 2 right back -->
+        </verts>
+        <verts>
+            <vtx><x>-2</x><y>28</y><z>5.29</z></vtx><!-- 3 left back -->
+        </verts>
+    </section>    
+
+    <section id="deck" type="plane">
+        <norm>k</norm>
+        <multiplyer>5.29</multiplyer>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>3</section_part><!-- top's left back -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>2</section_part><!-- top's right back -->
+            </lookup>
+        </verts>
+        <verts>
+            <vtx><x>2</x><y>31</y><z>5.29</z></vtx><!-- 2 right back -->
+        </verts>
+        <verts>
+            <vtx><x>-2</x><y>31</y><z>5.29</z></vtx><!-- 3 left back -->
+        </verts>
+    </section>
+
+    <section id="wedge_front" type="plane">
+        <norm>-j</norm>
+        <multiplyer>-12</multiplyer>
+        <verts>
+            <vtx><x>2</x><y>12</y><z>5.29</z></vtx><!-- 0 right bottom -->
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>1</section_part><!-- top's right front -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>0</section_part><!-- top's left front -->
+            </lookup>
+        </verts>
+        <verts>
+            <vtx><x>-2</x><y>12</y><z>5.29</z></vtx><!-- 3 left bottom -->
+        </verts>
+    </section>    
+
+    <section id="wedge_right" type="plane">
+        <norm>i</norm>
+        <multiplyer>2</multiplyer>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>2</section_part><!-- top's right back -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>1</section_part><!-- top's right front -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_front</section_from>
+                <section_part>0</section_part><!-- front's right bottom -->
+            </lookup>
+        </verts>
+    </section>    
+
+    <section id="wedge_left" type="plane">
+        <norm>-i</norm>
+        <multiplyer>2</multiplyer>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>3</section_part><!-- top's left back -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_front</section_from>
+                <section_part>3</section_part><!-- front's left bottom -->
+            </lookup>
+        </verts>
+        <verts>
+            <lookup>
+                <section_from>wedge_top</section_from>
+                <section_part>0</section_part><!-- top's left front -->
+            </lookup>
+        </verts>
+    </section>    
+
+    <section id="top_right_cylinder" type="cylinder">
+        <radius>26.75</radius>
+        <norm>1</norm>
+        <error>1</error>
+        <first_circle>
+            <ctr>
+                <x>0</x>
+                <y>12</y>
+                <z>-21.38924964</z>
+            </ctr>
+        </first_circle>
+        <last_circle>    
+            <ctr>
+                <x>0</x>
+                <y>31</y>
+                <z>-21.38924964</z>
+            </ctr>
+        </last_circle>
+        <start_angle>1.24193657474002</start_angle>
+        <end_angle>1.47720179568711</end_angle>
+    </section>
+
+
+    <section id="top_left_cylinder" type="cylinder">
+        <radius>26.75</radius>
+        <norm>1</norm>
+        <error>1</error>
+        <first_circle>
+            <ctr>
+                <x>0</x>
+                <y>12</y>
+                <z>-21.38924964</z>
+            </ctr>
+        </first_circle>
+        <last_circle>    
+            <ctr>
+                <x>0</x>
+                <y>31</y>
+                <z>-21.38924964</z>
+            </ctr>
+        </last_circle>
+        <start_angle>1.66439085790268</start_angle>
+        <end_angle>1.89965607925998</end_angle>
+    </section>
+
+    <!-- these patches will replace seams in the XML 
+            (expect an increase of vertices)
+            top_cylinder also will need adjustment: shortening length and angle 
+            right and left cylinders will be unchanged except for the no seams -->
+    
+    <section id="top_front_patch" type="patch">
+        <cylinder_from>top_cylinder</cylinder_from>
+        <cylinder_part>last_circle</cylinder_part>
+        <section_to>top_right_cylinder</section_to>
+        <section_part>first_circle</section_part>
+        <section_to>wedge_front</section_to>
+        <section_part>0</section_part><!-- front's right bottom -->
+        <section_to>wedge_front</section_to>
+        <section_part>3</section_part><!-- front's left bottom -->
+        <section_to>top_left_cylinder</section_to>
+        <section_part>first_circle</section_part>
+    </section>
+
+    <section id="top_right_patch" type="patch">
+        <cylinder_from>right_cylinder</cylinder_from>
+        <cylinder_part>end_angle</cylinder_part>
+        <section_to>top_cylinder</section_to>
+        <section_part>start_angle</section_part>
+        <section_to>top_right_cylinder</section_to>
+        <section_part>start_angle</section_part><!-- front's right bottom -->
+    </section>
+
+    <section id="top_left_patch" type="patch">
+        <cylinder_from>left_cylinder</cylinder_from>
+        <cylinder_part>start_angle</cylinder_part>
+        <section_to>top_cylinder</section_to>
+        <section_part>end_angle</section_part>
+        <section_to>top_left_cylinder</section_to>
+        <section_part>end_angle</section_part>
+    </section>
+
+    <section id="top_right_middle_patch" type="patch">
+        <cylinder_from>top_right_cylinder</cylinder_from>
+        <cylinder_part>end_angle</cylinder_part>
+        <section_to>wedge_front</section_to>
+        <section_part>0</section_part><!-- front's right bottom -->
+        <section_to>wedge_top</section_to>
+        <section_part>2</section_part><!-- top's right back -->
+        <section_to>deck</section_to>
+        <section_part>2</section_part><!-- deck's right back -->
+    </section>
+
+    <section id="top_left_middle_patch" type="patch">
+        <cylinder_from>top_left_cylinder</cylinder_from>
+        <cylinder_part>start_angle</cylinder_part>
+        <section_to>wedge_front</section_to>
+        <section_part>3</section_part><!-- front's left bottom -->
+        <section_to>wedge_top</section_to>
+        <section_part>3</section_part><!-- top's left back -->
+        <section_to>deck</section_to>
+        <section_part>3</section_part><!-- deck's left back -->
+    </section>
+
+    <section id="top_back_patch" type="patch">
+        <cylinder_from>top_slot_cylinder</cylinder_from>
+        <cylinder_part>first_circle</cylinder_part>
+        <section_to>top_right_cylinder</section_to>
+        <section_part>last_circle</section_part>
+        <section_to>deck</section_to>
+        <section_part>2</section_part><!-- deck's right back -->
+        <section_to>deck</section_to>
+        <section_part>3</section_part><!-- deck's left back -->
+        <section_to>top_left_cylinder</section_to>
+        <section_part>last_circle</section_part>
+    </section>
+
+    
+ </PlugTop>
+
